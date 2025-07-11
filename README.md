@@ -9,15 +9,21 @@
 EW-SIM-01/
 ├── src/
 │ ├── ew_sim_top.sv ← 🔝 Top-level integration module
+
 │ ├── threat_detector.sv ← Detects burst jamming, spoofing, entropy
+
 │ ├── command_authenticator.sv ← Authenticates incoming signal commands
+
 │ ├── aes_lite_encryption.sv ← AES-lite secure encryption block
+
 │ ├── dynamic_freq_selector.sv ← Frequency agility logic under attack
+
 │ ├── known_threat_buffer.sv ← Memory for known/repeated threats
+
 │ └── watchdog_unit.sv ← Monitors system failure and resets
-│
+
 ├── testbench/
-│ └── tb_ew_sim_01.sv ← ✅ Testbench simulating multiple threats
+ └── tb_ew_sim_01.sv ← ✅ Testbench simulating multiple threats
 
 
 ## 🧠 Key Features
