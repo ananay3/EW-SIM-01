@@ -1,0 +1,12 @@
+=== EW-SIM-01 Log File Start ===
+Cycle 120000 ns: FSM State = 0, Signal = 00, Command = 00
+Cycle 130000 ns: FSM State = 1, Signal = 00, Command = 00
+Cycle 140000 ns: FSM State = 3, Signal = 00, Command = 00
+Cycle 150000 ns: FSM State = 4, Signal = 00, Command = 00
+Cycle 160000 ns: FSM State = 0, Signal = 00, Command = 00
+Cycle 170000 ns: FSM State = 4, Signal = 00, Command = 00
+Cycle 180000 ns: FSM State = 0, Signal = 00, Command = 00
+Cycle 190000 ns: FSM State = 4, Signal = 00, Command = 00
+Cycle 200000 ns: FSM State = 0, Signal = 00, Command = 00
+Cycle 210000 ns: FSM State = 4, Signal = 00, Command = 00
+=== EW-SIM-01 Log File End ===
