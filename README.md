@@ -82,9 +82,14 @@ EW-SIM-01/
 
 
 
-![Waveform](waveform.png)
+![Waveform](outputs/waveform.png)
 
 ---
+
+## 📸 HeatMap Analysis
+
+![Waveform](outputs/ew_heatmap.png)
+
 
 ## 👨‍💻 Author
 
