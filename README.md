@@ -1,13 +1,18 @@
 # 🛡️ EW-SIM-01: Electronic Warfare Threat Detection & Jamming Countermeasure System
 
+*Project Type:* RTL Design | FSM | Security | Verification | Visualization  
+*Language:* SystemVerilog  
+*Toolchain:* Xilinx Vivado,  MATLAB (for analysis)  
+
 **EW-SIM-01** is a defence-grade simulation project built using **SystemVerilog and Vivado**, designed to detect, classify, and respond to electronic threats such as **burst jamming**, **signal spoofing**, and **entropy-based attacks**. It simulates the core digital logic of an advanced Electronic Warfare (EW) unit used in military communication and sensor platforms.
 
+> 💡 *Example:* Think of it like a military drone controller — if the incoming signals are suspicious (like extremely noisy or fake commands), it automatically detects it and either logs it, initiates secure verification, or moves to a recovery state. No human needed in loop.
 ---
 
 ## 📁 Project Structure
 
 EW-SIM-01/
-├── src/
+├── Design Sources/
 │ ├── ew_sim_top.sv ← 🔝 Top-level integration module
 
 │ ├── threat_detector.sv ← Detects burst jamming, spoofing, entropy
@@ -22,13 +27,26 @@ EW-SIM-01/
 
 │ └── watchdog_unit.sv ← Monitors system failure and resets
 
-├── testbench/
- └── tb_ew_sim_01.sv ← ✅ Testbench simulating multiple threats
+├── Simulation Sources/
+│ ├── tb_ew_sim_01.sv ← Testbench for normal + heatmap-based simulation
 
+│ ├── tb_ew_sim_top.sv ← Testbench for full integration + verification
+
+├── Verification Modules/
+│ ├── ew_assertions.sv  ←  Assertions for verifying correctness of states & transitions
+
+│ ├── ew_coverage.sv    ←  Functional coverage points for simulation completeness
+
+
+📁 Outputs
+ ├─ ew_log.txt                    # FSM log file (auto-generated during simulation)
+ ├─ ew_heatmap.png                # MATLAB-generated heatmap of FSM states
+ ├─ waveform.png                  # Vivado waveform snapshot
+ ├─ commandwindow_matlab.png      # Command window snapshot during MATLAB analysis
 
 ## 🧠 Key Features
 
-- ✅ **7-State FSM**: IDLE, JAMMED, SPOOF_DETECTED, AUTHENTICATING, RECOVERY, LOGGING, THREAT_KNOWN
+- ✅ **7-State Moore FSM**: IDLE, JAMMED, SPOOF_DETECTED, AUTHENTICATING, RECOVERY, LOGGING, THREAT_KNOWN
 - ✅ **Threat classification**: Detects burst jamming, signal spoofing, entropy/random attacks
 - ✅ **Command authentication**: Ensures command origin and integrity
 - ✅ **AES-lite encryption**: Secure block to simulate message encryption/decryption
